@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <title></title>
+  </head>
+  <body>
+    <a class="float-right" href="{{url_for('index')}}"><button class="btn btn-primary btn-sm">Return Home</button></a>
+
+    <h1 class="font-weight-bold text-center text-info">Edit Bài Tập</h1>
+
+<div class="container ">
+  <div class="row">
+    <div class="col-sm-12" >
+
+      <form class="" action="" method="post">
+
+      <div class="form-group">
+          <label class ="font-weight-bold" for="">Name</label>
+          <input class="form-control" name="name" value="{{baitap.name}}">
+      </div>
+
+      <div class="form-group">
+          <label class ="font-weight-bold" for="">Time</label>
+          <!-- <input class="form-control" name="time" value="{{baitap.time}}"> -->
+          <select name="time" class="form-control input-lg" placeholder="Thời gian">
+            <option value="{{baitap.time}}" selected>{{baitap.time}}</option>
+            <option value="1 phút">1 phút</option>
+            <option value="3 phút">3 phút</option>
+            <option value="5 phút">5 phút</option>
+            <option value="More">More</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+          <label class ="font-weight-bold" for="">Purpose</label>
+          <!-- <input class="form-control" name="purpose" value="{{baitap.purpose}}"> -->
+          <select name="purpose" class="form-control input-lg" placeholder="Mục đích">
+            <option value="{{baitap.purpose}}">{{baitap.purpose}}</option>
+            <option value="Đau chân">Đau chân</option>
+            <option value="Đau cổ">Đau cổ</option>
+            <option value="Đau lưng">Đau lưng</option>
+            <option value="Đau tay">Đau tay</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+          <label class ="font-weight-bold" for="">Space</label>
+          <!-- <input class="form-control" name="space" value="{{baitap.space}}"> -->
+          <select name="space" class="form-control input-lg" placeholder="Không gian">
+            <option value="{{baitap.space}}">{{baitap.space}}</option>
+            <option value ="Tại chỗ">Tại bàn làm việc</option>
+            <option value="Ngoài sảnh">Ngoài sảnh</option>
+
+            <option value="WC">WC</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+        <label class ="font-weight-bold" for="">Description</label>
+        <textarea class="form-control" name="description" rows="5" cols="80">{{baitap.description}}</textarea>
+      </div>
+
+      <div class="form-group">
+          <label class ="font-weight-bold" for="">Image</label>
+          {% for img in baitap.image %}
+          <input class="form-control" value="{{img}}" readonly>
+          <br>
+          {% endfor %}
+          Chỉnh sửa link (Ngăn cách link bằng dấu ","):
+          <textarea class="form-control" name="image" rows="5" required></textarea>
+      </div>
+
+      <div class="form-group">
+          <label class ="font-weight-bold" for="">Clip</label>
+          <input class="form-control" name="clip" value="{{baitap.clip}}">
+      </div>
+
+        <div class="form-group text-right">
+          <input class ="btn btn-info" type="submit" name="" value="Save Change">
+        </div>
+
+        </form>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>
