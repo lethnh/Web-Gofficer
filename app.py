@@ -15,21 +15,11 @@ class BaiTap(Document):
     description = StringField()
     image = ListField(StringField())
     clip = StringField()
-# baitap = BaiTap(
-# name="Xoay khớp cổ",
-# time=20,
-# purpose=" Giúp bạn thả lỏng cơ xương vùng cổ, thư giãn và khôi phục trạng thái mệt mỏi.",
-# space="Tại chỗ",
-# description="Bạn hãy ngồi thẳng,hai tay buông thả lỏng,từ từ nghiêng toàn bộ đầu về bên trái , phải,sau đó lại từ từ về vị trí đầu thẳng,Bạn từ từ cúi đầu xuống, thật chậm. Sau đó là ngóc đầu lên về tư thế thẳng với thân người. Chú ý, không ngửa đầu ra sau, có thể làm đau hơn",
-# image="https://drive.google.com/open?id=0Bxg-fKHz6ZdFeGt0RVVpUWdRQmc",
-# clip="https://youtu.be/subTIsB2Ca0")
-# baitap.save()
+
 
 
 @app.route('/')
 def index():
-
-    # ex = BaiTap.objects()
     return render_template('homepage.html')
 
 @app.route('/search', methods=['POST'])
@@ -64,7 +54,7 @@ def access():
 @app.route("/admin", methods =["POST"])
 def admin():
     listbaitap = BaiTap.objects()
-    if request.form["email"]== "admin" and request.form["pass"] =="admin":
+    if request.form["email"]== "admin" and request.form["pass"] =="244466666":
         return render_template('admin.html',listbaitap = listbaitap)
     else:
         return render_template("homepage.html")
@@ -96,7 +86,7 @@ def adbaitap():
 def baitap(baitap_id):
     baitap = BaiTap.objects().with_id(baitap_id)
 
-    return render_template('baitap_new.html', baitap= baitap)
+    return render_template('baitap_final.html', baitap= baitap)
 
 @app.route('/deletebaitap/<baitap_id>')
 def deletebaitap(baitap_id):

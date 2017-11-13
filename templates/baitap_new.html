@@ -24,27 +24,33 @@
 
     <div>
       <br>
-      <div class="container text-center">
-        <br>
-          <h4 class = 'display-4 font-weight '>Động tác : {{baitap.name}}</h4>
-        <br>
-      </div>
-      <br>
-
-      <div class="container">
-        <div class="col-md-2" style="float:left;"></div>
-        <div class="col-md-4" style="float:left;">
-          <p><strong>Thời gian:</strong> {{baitap.time}} </p>
-          <p><strong>Không gian:</strong> {{baitap.space}} </p>
-          <p><strong>Tác dụng:</strong> {{baitap.purpose}}</p>
-        </div>
-        <div class="col-md-4" style="float:left;">
-          <p><b>Miêu tả:</b> {{baitap.description}} </p>
-        </div>
-        <div class="col-md-2" style="">
+      <div class="card container">
+        <div class="card-header">
+          <div class="container text-center">
+            <br>
+              <h4 class = 'display-4 font-weight '>Động tác : {{baitap.name}}</h4>
+            <br>
+          </div>
         </div>
 
+        <br>
+
+        <div class="container">
+          <div class="col-md-2" style="float:left;"></div>
+          <div class="col-md-4" style="float:left;">
+            <p><strong>Thời gian:</strong> {{baitap.time}} </p>
+            <p><strong>Không gian:</strong> {{baitap.space}} </p>
+            <p><strong>Tác dụng:</strong> {{baitap.purpose}}</p>
+          </div>
+          <div class="col-md-4" style="float:left;">
+            <p><b>Miêu tả:</b> {{baitap.description}} </p>
+          </div>
+          <div class="col-md-2" style="">
+          </div>
+
+        </div>
       </div>
+
       <br>
 
       <div style="clear:both;">

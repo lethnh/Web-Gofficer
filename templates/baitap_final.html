@@ -2,11 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Kết quả tìm kiếm</title>
+    <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/master.css">
+    <link rel="stylesheet" href="../static/css/baitap_final.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+    .mySlides {display:none}
+    </style>
   </head>
   <body class="body">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-top: 0px;padding-bottom: 0px;">
@@ -31,85 +36,76 @@
             </div>
         </div>
     </nav>
-    <div class="hero">
-      <h2></h2>
-      <div class="container" id="search-blur">
-        <h1 class="text-center" style="font-family: 'Montserrat', sans-serif; ">Search and Do It!</h1>
-        <form class="" action="/search" method="post">
-          <div class="col-md-1 float-left"></div>
-          <div class="col-md-3 no-padding float-left input-group-lg">
-            <select id="time" name="time" class="form-control" placeholder="Thời gian" onkeydown = "if (event.keyCode == 13)
-                  document.getElementById('search-btn').click()">
-              <option value="0" >Thời gian</option>
-              <option value="1 phút">1 phút</option>
-              <option value="3 phút">3 phút</option>
-              <option value="5 phút">5 phút</option>
-              <option value="More">More</option>
-            </select>
+    <br>
+    <div class="container">
+      <div class="card text-center border-primary">
+        <div class="card-header">
+          <h2>Động tác: {{baitap.name}}</h2>
+        </div>
+        <div class="card-body">
+          <div class="col-sm-12 col-md-4 float-left">
+            <div class="card" id='ul'>
+              <div class="card-header">
+                Thông tin bài tập
+              </div>
+              <ul class="list-group list-group-flush" >
+                <li class="list-group-item">Tên bài tập: {{baitap.name}}</li>
+                <li class="list-group-item">Thời gian: {{baitap.time}}</li>
+                <li class="list-group-item">Không gian: {{baitap.space}}</li>
+                <li class="list-group-item">Loại bệnh: {{baitap.purpose}}</li>
+                <li class="list-group-item">Hướng dẫn tập: {{baitap.description}}</li>
+              </ul>
+            </div>
           </div>
-          <div class="col-sm-12 col-md-3 no-padding float-left input-group-lg">
-            <select id="purpose" name="purpose" class="form-control" placeholder="Mục đích" onkeydown = "if (event.keyCode == 13)
-                  document.getElementById('search-btn').click()">
-              <option value="0">Mục đích</option>
-              <option value="Đau chân">Đau chân</option>
-              <option value="Đau cổ">Đau cổ</option>
-              <option value="Đau lưng">Đau lưng</option>
-              <option value="Đau tay">Đau tay</option>
-            </select>
-          </div>
-          <div class="col-sm-12 col-md-3 no-padding float-left input-group-lg">
-            <select id="space" name="space" class="form-control" placeholder="Không gian" onkeydown = "if (event.keyCode == 13)
-                  document.getElementById('search-btn').click()">
-              <option value="0">Không gian tập</option>
-              <option value ="Tại chỗ">Tại bàn làm việc</option>
-              <option value="Ngoài sảnh">Ngoài sảnh</option>
+          <div class="col-sm-12 col-md-8 float-left">
+            <nav class="nav nav-tabs" id="myTab" role="tablist">
+              <a class="nav-item nav-link active text-primary" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Slideshow</a>
+              <a class="nav-item nav-link text-primary" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Video Minh Họa</a>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="">
+                  <h2>Slideshow Indicators</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
 
-              <option value="WC">WC</option>
-            </select>
-          </div>
-          <div class="col-sm-12 col-md-1 no-padding float-left">
-            <button id="search-btn" type="submit" class="btn btn-danger btn-lg"><i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-          </div>
-          <div class="col-md-1"></div>
-        </form>
-      </div>
-      <h3>&nbsp;</h3>
-    </div>
-    <div class="backgrd">
-      <div class="container">
-        <br>
-        <h1>Kết quả tìm kiếm: </h1>
-        <br>
-        <div class="row container-fluid">
-          <div class="container backgrd">
-            {% for baitap in listbaitap %}
-
-            <div class="col-sm-12 col-md-4 float-left" style="padding-bottom: 10px;">
-              <div class="card" style="width: 20rem;">
-                <a href="baitap/{{baitap.id}}"><img  class="card-img-top" src="{{baitap.image[0]}}" alt="Card image cap"></a>
-
-                <div class="card-body">
-                  <div class="card-header">
-                    <a href="baitap/{{baitap.id}}"><h4 class="text-primary">Động tác: {{baitap.name}}</h4></a>
+                <div class="w3-content wrapper" style="max-width:800px">
+                  {% for img in baitap.image %}
+                  <div class="mySlides im1" style="background-image: url('{{img}}');">
                   </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Thời gian: {{baitap.time}}</li>
-                    <li class="list-group-item">Không gian: {{baitap.space}}</li>
-                    <li class="list-group-item">Loại bệnh: {{baitap.purpose}}</li>
-                  </ul>
+                  {% endfor %}
+                </div>
 
 
+
+                <div class="w3-center">
+                  <div class="w3-section">
+                    <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+                    <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+                  </div>
+                  {% for img in baitap.image %}
+                  <button class="w3-button demo" onclick="currentDiv({{loop.index}})">{{loop.index}}</button>
+                  {% endfor %}
                 </div>
               </div>
-            </div>
-            {% endfor %}
-          </div>
-        </div>
+              <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <h2>Nhấn xem cmm đi</h2>
+                <br>
+                <iframe width="100%" height="370px" src="{{baitap.clip}}" frameborder="0" gesture="media" allowfullscreen></iframe>
+              </div>
 
+            </div>
+          </div>
+
+        </div>
+        <div class="card-footer text-muted">
+          2 days ago
+        </div>
       </div>
-      <br>
     </div>
+    <br>
+
+
     <footer id="myFooter">
         <div class="container">
             <div class="row">
@@ -150,7 +146,34 @@
             <p> Copyright © GOfficer 2017.</p>
         </div>
     </footer>
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
 
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+
+      function currentDiv(n) {
+        showDivs(slideIndex = n);
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+           dots[i].className = dots[i].className.replace(" w3-red", "");
+        }
+        x[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " w3-red";
+      }
+    </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
