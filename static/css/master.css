@@ -311,9 +311,10 @@ select#space {
 
 .card-body {
   padding:0;
-
+  text-decoration: none;
 }
 .card-header{
   font-size: 25px;
   margin-top: 10px;
+  text-decoration: none;
 }
