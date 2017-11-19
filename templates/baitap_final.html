@@ -9,6 +9,8 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Libraries CSS Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
     <style>
     .mySlides {display:none}
     </style>
@@ -16,7 +18,7 @@
   <body class="body">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-top: 0px;padding-bottom: 0px;">
         <div class="container">
-            <a class="navbar-brand" href="{{ url_for('index')}}">GOfficer</a>
+            <a class="navbar-brand  wow bounceInUp" href="{{ url_for('index')}}">GOfficer</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -24,9 +26,9 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <h1 class="mr-auto"></h1>
                 <ul class="nav navbar-nav">
-                    <li><a class="nav-item nav-link" href="{{url_for('about')}}" style="color: white;">ABOUT US</a></li>
+                    <li><a class="nav-item nav-link  wow bounceInUp" href="{{url_for('about')}}" style="color: white;">ABOUT US</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" style="color: white;">HELP <span class="caret"></span></a>
+                        <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" style="color: white;">HELP <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{url_for('access')}}">Admin</a></li>
                             <li><a class="dropdown-item" href="{{url_for('donate')}}">Donate</a></li>
@@ -38,14 +40,14 @@
     </nav>
     <br>
     <div class="container">
-      <div class="card  border-primary">
+      <div class="card text-center border-primary">
         <div class="card-header">
           <h2>Động tác: {{baitap.name}}</h2>
         </div>
         <div class="card-body">
           <div class="col-sm-12 col-md-4 float-left">
             <div class="card" id='ul'>
-              <div class="card-header text-center">
+              <div class="card-header">
                 Thông tin bài tập
               </div>
               <ul class="list-group list-group-flush" >
@@ -65,8 +67,8 @@
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                 <div class="">
-                  <h2>Slideshow Indicators</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <h2></h2>
+                  <p></p>
                 </div>
 
                 <div class="w3-content wrapper" style="max-width:800px">
@@ -89,7 +91,7 @@
                 </div>
               </div>
               <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                <h2>Nhấn xem cmm đi</h2>
+                <h2></h2>
                 <br>
                 <iframe width="100%" height="370px" src="{{baitap.clip}}" frameborder="0" gesture="media" allowfullscreen></iframe>
               </div>
@@ -130,12 +132,7 @@
                     </ul>
                 </div>
 
-
                 <div class="col-sm-4">
-    <div class="col-sm-4">
-
-    </div>
-
                     <div class="social-networks">
                         <a href="https://twitter.com/?lang=vi" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
                         <a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
@@ -182,6 +179,9 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
   </body>
 </html>

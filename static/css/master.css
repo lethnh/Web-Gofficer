@@ -1,11 +1,10 @@
 .body {
     font-family: 'Montserrat', sans-serif;
+
+
+
 }
-@media (max-width:600px) {
-  .backgrd {
-    width: auto;
-  }
-}
+
 .navbar-nav>li>a {
     color: #ffffff;
     font-size: 18px;
@@ -85,7 +84,7 @@
 
 .hero p {
     color: #efefe;
-    font-size: 22px;
+    font-size: 14px;
     max-width: 660px;
     margin: 0 auto 20px;
     font-weight: normal;
@@ -108,11 +107,6 @@
         margin-left: 20px;
         border-top: none;
         box-shadow: none;
-    }
-
-    .hero{
-        margin-top: 40px;
-        margin-bottom: 40px;
     }
 
     .hero h1{
@@ -169,7 +163,7 @@ select#space {
 
 #search-blur {
   padding: 20px;
-  padding-bottom: 70px;
+  padding-bottom: 10px;
   background: rgba(34,34,34,0.75);
 
 }
@@ -307,14 +301,12 @@ select#space {
     #myFooter {
         text-align: center;
     }
-}
+    
+    #myFooter ul {
+        display: none;
+    }
 
-.card-body {
-  padding:0;
-  text-decoration: none;
-}
-.card-header{
-  font-size: 25px;
-  margin-top: 10px;
-  text-decoration: none;
+    #myFooter h5 {
+        display: none;
+    }
 }

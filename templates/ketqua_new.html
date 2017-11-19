@@ -13,7 +13,7 @@
   <body class="body">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-top: 0px;padding-bottom: 0px;">
         <div class="container">
-            <a class="navbar-brand wow bounceInUp" href="{{ url_for('index')}}">GOfficer</a>
+            <a class="navbar-brand " href="{{ url_for('index')}}">GOfficer</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -21,7 +21,7 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <h1 class="mr-auto"></h1>
                 <ul class="nav navbar-nav">
-                    <li><a class="nav-item nav-link wow bounceInUp" href="{{url_for('about')}}" style="color: white;">ABOUT US</a></li>
+                    <li><a class="nav-item nav-link " href="{{url_for('about')}}" style="color: white;">ABOUT US</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" style="color: white;">HELP <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -39,10 +39,10 @@
         <h1 class="text-center" style="font-family: 'Montserrat', sans-serif; ">Search and Do It!</h1>
         <form class="" action="/search" method="post">
           <div class="col-md-1 col-sm-12 float-left"></div>
-          <div class="col-md-3 col-sm-45 no-padding float-left input-group-lg">
+          <div class="col-md-3 col-sm-12 no-padding float-left input-group-lg">
             <select id="time" name="time" class="form-control" placeholder="Thời gian" onkeydown = "if (event.keyCode == 13)
                   document.getElementById('search-btn').click()">
-              <option value="0" >Thời gian</option>
+              <option value="all" >Thời gian</option>
               <option value="1 phút">1 phút</option>
               <option value="3 phút">3 phút</option>
               <option value="5 phút">5 phút</option>
@@ -52,7 +52,7 @@
           <div class="col-sm-12 col-md-3 no-padding float-left input-group-lg">
             <select id="purpose" name="purpose" class="form-control" placeholder="Mục đích" onkeydown = "if (event.keyCode == 13)
                   document.getElementById('search-btn').click()">
-              <option value="0">Mục đích</option>
+              <option value="all">Mục đích</option>
               <option value="Đau chân">Đau chân</option>
               <option value="Đau cổ">Đau cổ</option>
               <option value="Đau lưng">Đau lưng</option>
@@ -62,20 +62,21 @@
           <div class="col-sm-12 col-md-3 no-padding float-left input-group-lg">
             <select id="space" name="space" class="form-control" placeholder="Không gian" onkeydown = "if (event.keyCode == 13)
                   document.getElementById('search-btn').click()">
-              <option value="0">Không gian tập</option>
+              <option value="all">Không gian tập</option>
               <option value ="Tại chỗ">Tại bàn làm việc</option>
               <option value="Ngoài sảnh">Ngoài sảnh</option>
 
               <option value="WC">WC</option>
             </select>
           </div>
-          <div class="col-sm-12 col-md-1 no-padding float-left">
-            <button id="search-btn" type="submit" class="btn btn-danger btn-lg"><i class="fa fa-search" aria-hidden="true"></i>
+          <div class="col-sm-12 col-md-1 no-padding float-left" style="text-align: center">
+            <button style="margin-bottom: 10px" id="search-btn" type="submit" class="btn btn-danger btn-lg"><i class="fa fa-search" aria-hidden="true"></i>
             </button>
           </div>
           <div class="col-md-1 col-sm-12"></div>
         </form>
 
+        <p class="text-center text-light" style="font: 18px;">Rencent search: {{ request.form["time"] }}, {{ request.form["purpose"] }}, {{ request.form["space"] }} </p>
       </div>
       <h3>&nbsp;</h3>
     </div>
@@ -84,20 +85,17 @@
         <br>
         <h1>Kết quả tìm kiếm: </h1>
         <br>
-        <div  class="row container-fluid">
-          <div class="container backgrd">
+        <div  class="row container-fluid" style="width:auto; padding: 0">
+          <div class="container backgrd  wow bounceInUp " style="    animation-delay: 1s;">
             {% for baitap in listbaitap %}
 
             <div class="col-sm-12 col-md-6 col-lg-4 float-left" style="padding-bottom: 10px;">
-              <div class="card" style="width: 20rem;">
+              <div class="card" >
                 <a href="baitap/{{baitap.id}}"><img  class="card-img-top" src="{{baitap.image[0]}}" alt="Card image cap"></a>
 
-                <div class="card-body">
-                  <div class="card-header" >
-
+                <div class="card-body" style="padding: 0">
+                  <div class="card-header" style="padding: 20px 10px;margin-bottom: 0px">
                     <a style="text-decoration: none" href="baitap/{{baitap.id}}"><h4  class="text-primary">Động tác: {{baitap.name}}</h4></a>
-
-
                   </div>
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item">Thời gian: {{baitap.time}}</li>

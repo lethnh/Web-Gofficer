@@ -28,19 +28,19 @@ def search():
     purpose = request.form["purpose"]
     space = request.form["space"]
 
-    if request.form["time"] == '0' and request.form["purpose"] =="0" and request.form["space"] == '0':
+    if request.form["time"] == 'all' and request.form["purpose"] =="all" and request.form["space"] == 'all':
         listbaitap = BaiTap.objects()
-    elif request.form["time"] == "0" and request.form["purpose"] =="0" and request.form["space"] != "0":
+    elif request.form["time"] == "all" and request.form["purpose"] =="all" and request.form["space"] != "all":
         listbaitap = BaiTap.objects(space = space)
-    elif request.form["time"] == "0" and request.form["purpose"] !="0" and request.form["space"] == "0":
+    elif request.form["time"] == "all" and request.form["purpose"] !="all" and request.form["space"] == "all":
         listbaitap = BaiTap.objects(purpose = purpose)
-    elif request.form["time"] != "0" and request.form["purpose"] =="0" and request.form["space"] == "0":
+    elif request.form["time"] != "all" and request.form["purpose"] =="all" and request.form["space"] == "all":
         listbaitap = BaiTap.objects(time = time)
-    elif request.form["time"] != "0" and request.form["purpose"] !="0" and request.form["space"] == "0":
+    elif request.form["time"] != "all" and request.form["purpose"] !="all" and request.form["space"] == "all":
         listbaitap = BaiTap.objects(time = time, purpose = purpose)
-    elif request.form["time"] != "0" and request.form["purpose"] =="0" and request.form["space"] != "0":
+    elif request.form["time"] != "all" and request.form["purpose"] =="all" and request.form["space"] != "all":
         listbaitap = BaiTap.objects(time = time, space = space)
-    elif request.form["time"] == "0" and request.form["purpose"] !="0" and request.form["space"] != "0":
+    elif request.form["time"] == "all" and request.form["purpose"] !="all" and request.form["space"] != "all":
         listbaitap = BaiTap.objects(purpose = purpose, space = space)
     else:
         listbaitap = BaiTap.objects(time=time, purpose = purpose, space = space)
@@ -129,7 +129,7 @@ def donate():
     return render_template("donate.html")
 @app.route("/aboutus")
 def about():
-    return render_template("about.html")
+    return render_template("aboutus.html")
 
 if __name__ == '__main__':
   app.run(debug=True)

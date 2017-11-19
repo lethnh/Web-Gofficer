@@ -77,7 +77,17 @@
         border-top: none;
         box-shadow: none;
     }
+    #myFooter {
+        text-align: center;
+    }
 
+    #myFooter ul {
+        display: none;
+    }
+
+    #myFooter h5 {
+        display: none;
+    }
 
 }
 
