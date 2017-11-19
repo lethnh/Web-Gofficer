@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Kết quả tìm kiếm</title>
+    <meta name="viewport" content="width = device-width, initial-scale= 1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/css/master.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -36,8 +37,8 @@
       <div class="container" id="search-blur">
         <h1 class="text-center" style="font-family: 'Montserrat', sans-serif; ">Search and Do It!</h1>
         <form class="" action="/search" method="post">
-          <div class="col-md-1 float-left"></div>
-          <div class="col-md-3 no-padding float-left input-group-lg">
+          <div class="col-md-1 col-sm-12 float-left"></div>
+          <div class="col-md-3 col-sm-45 no-padding float-left input-group-lg">
             <select id="time" name="time" class="form-control" placeholder="Thời gian" onkeydown = "if (event.keyCode == 13)
                   document.getElementById('search-btn').click()">
               <option value="0" >Thời gian</option>
@@ -71,7 +72,7 @@
             <button id="search-btn" type="submit" class="btn btn-danger btn-lg"><i class="fa fa-search" aria-hidden="true"></i>
             </button>
           </div>
-          <div class="col-md-1"></div>
+          <div class="col-md-1 col-sm-12"></div>
         </form>
       </div>
       <h3>&nbsp;</h3>
@@ -113,7 +114,7 @@
     <footer id="myFooter">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-3 col-sm-12">
                     <h2 class="logo" ><a href="{{url_for('index')}}"><img style="height: 180px;" src="../../static/image/GOfficer (2).png" alt=""> </a></h2>
                 </div>
                 <div class="col-sm-2">
