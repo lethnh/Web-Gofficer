@@ -1,7 +1,7 @@
 .body {
     font-family: 'Montserrat', sans-serif;
 }
-@media (max-width:768px) {
+@media (max-width:600px) {
   .backgrd {
     width: auto;
   }
@@ -307,4 +307,13 @@ select#space {
     #myFooter {
         text-align: center;
     }
+}
+
+.card-body {
+  padding:0;
+
+}
+.card-header{
+  font-size: 25px;
+  margin-top: 10px;
 }
