@@ -13,7 +13,7 @@
   <body class="body">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-top: 0px;padding-bottom: 0px;">
         <div class="container">
-            <a class="navbar-brand " href="{{ url_for('index')}}">GOfficer</a>
+            <a class="navbar-brand wow bounceInUp" href="{{ url_for('index')}}">GOfficer</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -21,9 +21,9 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <h1 class="mr-auto"></h1>
                 <ul class="nav navbar-nav">
-                    <li><a class="nav-item nav-link " href="{{url_for('about')}}" style="color: white;">ABOUT US</a></li>
+                    <li><a class="nav-item nav-link wow bounceInUp" href="{{url_for('about')}}" style="color: white;">ABOUT US</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" style="color: white;">HELP <span class="caret"></span></a>
+                        <a class="nav-link dropdown-toggle wow bounceInUp" data-toggle="dropdown" href="#" style="color: white;">HELP <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{url_for('access')}}">Admin</a></li>
                             <li><a class="dropdown-item" href="{{url_for('donate')}}">Donate</a></li>
