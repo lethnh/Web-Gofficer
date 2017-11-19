@@ -1,10 +1,11 @@
 .body {
     font-family: 'Montserrat', sans-serif;
-
-
-
 }
-
+@media (max-width:768px) {
+  .backgrd {
+    width: auto;
+  }
+}
 .navbar-nav>li>a {
     color: #ffffff;
     font-size: 18px;
