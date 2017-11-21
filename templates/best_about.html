@@ -1,88 +1,91 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/best_about.css">
-  </head>
-  <body>
 
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-top: 0px;padding-bottom: 0px;">
-          <div class="container">
-              <a class="navbar-brand" href="{{ url_for('index')}}">GOfficer</a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../static/css/best_about.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-top: 0px;padding-bottom: 0px;">
+    <div class="container">
+      <a class="navbar-brand" href="{{ url_for('index')}}">GOfficer</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
 
-              <div class="collapse navbar-collapse" id="myNavbar">
-                  <h1 class="mr-auto"></h1>
-                  <ul class="nav navbar-nav">
-                      <li><a class="nav-item nav-link" href="{{url_for('about')}}" style="color: white;">ABOUT US</a></li>
-                      <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" style="color: white;">HELP <span class="caret"></span></a>
-                          <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="{{url_for('access')}}">Admin</a></li>
-                              <li><a class="dropdown-item" href="{{url_for('donate')}}">Donate</a></li>
-                          </ul>
-                      </li>
-                  </ul>
-              </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <h1 class="mr-auto"></h1>
+        <ul class="nav navbar-nav">
+          <li><a class="nav-item nav-link" href="{{url_for('about')}}" style="color: white;">ABOUT US</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" style="color: white;">HELP <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{{url_for('access')}}">Admin</a></li>
+              <li><a class="dropdown-item" href="{{url_for('donate')}}">Donate</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-container">
+      <h1>Welcome to GOfficer</h1>
+      <h2>We are team of talanted designers making websites with Bootstrap</h2>
+      <a href="#about" class="btn-get-started">Get Started</a>
+    </div>
+  </section>
+
+
+  <section id="about" style="margin-top: 20px;">
+    <div class="container">
+      <div class="row about-container">
+
+        <div class="col-lg-6 content order-lg-1 order-2">
+          <h2 class="title">Few Words About Us</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+
+          <div class="icon-box wow fadeInUp">
+            <div class="icon float-left" style="height:10vh;"><i class="fa fa-shopping-bag fa-5x"></i></div>
+            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
           </div>
-      </nav>
 
-      <section id="hero">
-        <div class="hero-container">
-          <h1>Welcome to GOfficer</h1>
-          <h2>We are team of talanted designers making websites with Bootstrap</h2>
-          <a href="#about" class="btn-get-started">Get Started</a>
-        </div>
-      </section>
+          <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+            <div class="icon float-left" style="height:10vh;"><i class="fa fa-photo fa-5x"></i></div>
+            <h4 class="title"><a href="">Magni Dolores</a></h4>
+            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          </div>
 
-
-      <section id="about" style="margin-top: 20px;">
-        <div class="container">
-          <div class="row about-container">
-
-            <div class="col-lg-6 content order-lg-1 order-2">
-              <h2 class="title">Few Words About Us</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-
-              <div class="icon-box wow fadeInUp">
-                <div class="icon float-left" style="height:10vh;"><i class="fa fa-shopping-bag fa-5x"></i></div>
-                <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-                <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-              </div>
-
-              <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
-                <div class="icon float-left" style="height:10vh;"><i class="fa fa-photo fa-5x"></i></div>
-                <h4 class="title"><a href="">Magni Dolores</a></h4>
-                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-              </div>
-
-              <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
-                <div class="icon float-left" style="height:15vh;"><i class="fa fa-bar-chart fa-5x"></i></div>
-                <h4 class="title"><a href="">Dolor Sitema</a></h4>
-                <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-              </div>
-
-            </div>
-
-            <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight">
-              <img src="http://rismedia.com/wp-content/uploads/2016/08/superheroes.jpg" alt="image team" style="width:90vh; height:80vh;">
-            </div>
+          <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+            <div class="icon float-left" style="height:15vh;"><i class="fa fa-bar-chart fa-5x"></i></div>
+            <h4 class="title"><a href="">Dolor Sitema</a></h4>
+            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
           </div>
 
         </div>
-      </section><!-- #about -->
+
+        <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight">
+          <img src="http://rismedia.com/wp-content/uploads/2016/08/superheroes.jpg" alt="image team" style="width:90vh; height:80vh;">
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- #about -->
 
 
-    <!--==========================
+  <!--==========================
     Services Section
   ============================-->
   <section id="services" style="margin-top: 20px; background-color: whitesmoke; padding-top: 20px">
@@ -138,11 +141,13 @@
       </div>
 
     </div>
-  </section><!-- #services -->
+  </section>
+  <!-- #services -->
 
   <section id="call" style="background:url('https://ltts.com.au/wp-content/uploads/2016/06/h10-call-to-action-background.jpg')">
     <h1 style="padding-top: 20px">Call to action</h1>
     <p style="padding-bottom: 20px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
   </section>
-  </body>
+</body>
+
 </html>
