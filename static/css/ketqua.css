@@ -1,135 +1,144 @@
 body {
-  font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .header-nightsky {
-  color: #ffffff;
-  background: linear-gradient(135deg, #172a74, #21a9af);
-  background-color: #184e8e;
-  background-size: cover;
-  background-position: bottom;
-  padding-bottom: 100px;
+    color: #ffffff;
+    background:linear-gradient(135deg, #172a74, #21a9af);
+    background-color:#184e8e;
+    background-size: cover;
+    background-position: bottom;
+    padding-bottom: 100px;
 }
 
 .header-nightsky .navbar-nav>li>a {
-  color: #ffffff;
-  font-size: 18px;
-  border-radius: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 10px;
 }
 
 .header-nightsky .navbar {
-  margin-bottom: 0px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 100%;
-  border-bottom: none;
-  background-color: transparent;
-  min-width: 300px;
-  border: none;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    border-bottom:none;
+    background-color: transparent;
+    min-width: 300px;
+    border: none;
 }
 
-.header-nightsky .navbar-default .navbar-nav>.open>a, .header-nightsky .navbar-default .navbar-nav>.open>a:focus, .header-nightsky .navbar-default .navbar-nav>.open>a:hover {
-  color: #ccc;
-  background-color: transparent;
+.header-nightsky .navbar-default .navbar-nav>.open>a,
+.header-nightsky .navbar-default .navbar-nav>.open>a:focus,
+.header-nightsky .navbar-default .navbar-nav>.open>a:hover {
+    color: #ccc;
+    background-color: transparent;
 }
 
-.header-nightsky .nav>li>a:focus, .header-nightsky .nav>li>a:hover {
-  color: #ccc;
-  background-color: transparent;
+.header-nightsky .nav>li>a:focus,
+.header-nightsky .nav>li>a:hover {
+    color: #ccc;
+    background-color: transparent;
 }
 
 .header-nightsky .navbar-nav>li {
-  margin-right: 20px;
+    margin-right: 20px;
 }
 
 .header-nightsky .navbar-nav {
-  margin-top: 12px;
+   margin-top: 12px;
 }
 
 .header-nightsky .navbar-toggle {
-  background-color: transparent !important;
-  margin-top: 20px;
-  border: 1px solid #fff;
+    background-color: transparent !important;
+    margin-top: 20px;
+    border: 1px solid #fff;
 }
 
 .header-nightsky .navbar-toggle .icon-bar {
-  background-color: black;
+    background-color: black;
 }
 
 .header-nightsky .navbar-brand {
-  color: #ffffff;
-  font-size: 50px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .header-nightsky .navbar-brand:hover {
-  color: #ccc;
+    color: #ccc;
 }
 
 .header-nightsky .hero {
-  margin-top: 80px;
-  margin-bottom: 100px;
+
+    margin-top: 80px;
+    margin-bottom: 100px;
 }
 
 .header-nightsky .hero h1 {
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 60px;
-  margin-bottom: 36px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 60px;
+    margin-bottom: 36px;
 }
 
+
 .header-nightsky .hero p {
-  color: #efefe;
-  font-size: 22px;
-  max-width: 660px;
-  margin: 0 auto 20px;
-  font-weight: normal;
-  line-height: 1.5;
+    color: #efefe;
+    font-size: 22px;
+    max-width: 660px;
+    margin: 0 auto 20px;
+    font-weight: normal;
+    line-height: 1.5;
 }
 
 .header-nightsky .btn-primary {
-  color: #fff;
-  background-color: transparent;
-  border-color: #fffbfb !important;
-  outline: none;
-  margin-right: 20px;
-  margin-top: 20px;
-  font-size: 24px;
-  padding: 18px 24px;
-  transition: 0.2s background-color;
+    color: #fff;
+    background-color: transparent;
+    border-color: #fffbfb !important;
+    outline:none;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 24px;
+    padding: 18px 24px;
+    transition:0.2s background-color;
 }
 
 .header-nightsky .btn-primary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+    background-color:rgba(255,255,255,0.1);
 }
 
 .header-nightsky .btn-primary:active {
-  transform: translateY(1px);
+    transform:translateY(1px);
 }
 
 @media screen and (max-width: 767px) {
-  .header-nightsky .navbar-default .navbar-nav .open .dropdown-menu>li>a {
-    color: #ccc;
-    font-size: 16px;
-  }
-  .header-nightsky .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
-    color: #ccc;
-  }
-  .header-nightsky .navbar-collapse {
-    margin-left: 20px;
-    border-top: none;
-    box-shadow: none;
-  }
-  .header-nightsky .hero {
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-  .header-nightsky .hero h1 {
-    font-size: 42px;
-  }
-}
 
+    .header-nightsky .navbar-default .navbar-nav .open .dropdown-menu>li>a{
+        color: #ccc;
+        font-size: 16px;
+    }
+
+    .header-nightsky .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{
+        color: #ccc;
+    }
+
+    .header-nightsky .navbar-collapse {
+        margin-left: 20px;
+        border-top: none;
+        box-shadow: none;
+    }
+
+    .header-nightsky .hero{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .header-nightsky .hero h1{
+        font-size: 42px;
+    }
+}
 .no-padding {
   padding: 3px;
 }
@@ -170,7 +179,7 @@ select#space {
 }
 
 .dropdown-menu>li>a {
-  padding: 20px!important;
+    padding: 20px!important;
 }
 
 .img-thumbnail {
@@ -188,7 +197,6 @@ image {
   height: 100%;
   width: auto;
 }
-
 .cardimg {
   width: 100%;
   height: 200px;
@@ -205,7 +213,8 @@ image {
   line-height: 1.2;
 }
 
-div.col-md-6 {
+div.col-md-6{
+
   clear: top;
   margin-bottom: 15px;
 }

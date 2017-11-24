@@ -1,125 +1,137 @@
 body {
-  font-family: "Open Sans", sans-serif;
-  background: url("https://images5.alphacoders.com/711/thumb-1920-711085.jpg") center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
+    font-family: 'Montserrat', sans-serif;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
 }
 
 .header-nightsky {
-  color: #ffffff;
-  padding-bottom: 100px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .header-nightsky .navbar-nav>li>a {
-  color: #ffffff;
-  font-size: 20px;
+    color: #ffffff;
+    font-size: 20px;
 }
 
 .header-nightsky .navbar {
-  margin-bottom: 0px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 100%;
-  border-bottom: none;
-  background-color: transparent;
-  min-width: 300px;
-  border: none;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    border-bottom:none;
+    background-color: transparent;
+    min-width: 300px;
+    border: none;
 }
 
-.header-nightsky .navbar-default .navbar-nav>.open>a, .header-nightsky .navbar-default .navbar-nav>.open>a:focus, .header-nightsky .navbar-default .navbar-nav>.open>a:hover {
-  color: #ccc;
-  background-color: transparent;
+.header-nightsky .navbar-default .navbar-nav>.open>a,
+.header-nightsky .navbar-default .navbar-nav>.open>a:focus,
+.header-nightsky .navbar-default .navbar-nav>.open>a:hover {
+    color: #ccc;
+    background-color: transparent;
 }
 
-.header-nightsky .nav>li>a:focus, .header-nightsky .nav>li>a:hover {
-  color: #ccc;
-  background-color: transparent;
+.header-nightsky .nav>li>a:focus,
+.header-nightsky .nav>li>a:hover {
+    color: #ccc;
+    background-color: transparent;
 }
 
 .header-nightsky .navbar-nav>li {
-  margin-right: 20px;
+    margin-right: 20px;
 }
 
 .header-nightsky .navbar-nav {
-  margin-top: 15px;
+   margin-top: 15px;
 }
 
 .header-nightsky .navbar-toggle {
-  background-color: transparent !important;
-  margin-top: 20px;
-  border: 1px solid #fff;
+    background-color: transparent !important;
+    margin-top: 20px;
+    border: 1px solid #fff;
 }
 
 .header-nightsky .navbar-toggle .icon-bar {
-  background-color: black;
+    background-color: white;
 }
 
 .header-nightsky .navbar-brand {
-  color: #ffffff;
-  font-size: 60px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-weight: 700;
+    color: #ffffff;
+    font-size: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .header-nightsky .navbar-brand:hover {
-  color: #ccc;
+    color: #ccc;
 }
 
 .header-nightsky .hero {
-  text-align: center;
-  margin-top: 80px;
-  margin-bottom: 100px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
 }
 
 .header-nightsky .hero h1 {
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 70px;
-  margin-bottom: 36px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 65px;
+    margin-bottom: 36px;
 }
 
+
 .header-nightsky .hero p {
-  color: #efefe;
-  font-size: 25px;
-  max-width: 660px;
-  margin: 0 auto 20px;
-  font-weight: 400;
-  line-height: 1;
+    color: whitesmoke;
+    font-size: 22px;
+    max-width: 660px;
+    margin: 0 auto 20px;
+    font-weight: 400;
+    line-height: 1;
 }
 
 @media screen and (max-width: 767px) {
-  .header-nightsky .navbar-brand {
-    color: #ffffff;
-    font-size: 40px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  .header-nightsky .navbar-default .navbar-nav .open .dropdown-menu>li>a {
-    color: #ccc;
-    font-size: 16px;
-  }
-  .header-nightsky .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
-    color: #ccc;
-  }
-  .header-nightsky .navbar-collapse {
-    margin-left: 20px;
-    border-top: none;
-    box-shadow: none;
-  }
-  .header-nightsky .hero {
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-  .header-nightsky .hero h1 {
-    font-size: 32px;
-  }
-  .header-nightsky .hero p {
-    font-size: 16px;
-  }
-}
+    .header-nightsky .navbar-brand {
+        color: #ffffff;
+        font-size: 40px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 
+    .header-nightsky .navbar-default .navbar-nav .open .dropdown-menu>li>a{
+        color: #ccc;
+        font-size: 16px;
+    }
+
+    .header-nightsky .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{
+        color: #ccc;
+    }
+
+    .header-nightsky .navbar-collapse {
+        margin-left: 20px;
+        border-top: none;
+        box-shadow: none;
+    }
+
+    .header-nightsky .hero{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .header-nightsky .hero h1{
+        font-size: 32px;
+    }
+    .header-nightsky .hero p{
+        font-size: 16px;
+    }
+    h3 {
+      font-size: 16px;
+      margin-top: 0px;
+    }
+}
 .no-padding {
   padding: 3px;
 }
@@ -160,38 +172,49 @@ select#space {
 }
 
 .dropdown-menu>li>a {
-  padding: 20px!important;
+    padding: 20px!important;
 }
 
 .img-thumbnail {
   background: transparent;
 }
 
+
 /*      FOOTER CSS       */
 
 #myFooter {
-  background-color: transparent;
-  color: white;
-  padding-top: 30px;
+    background-color: transparent;
+    color: white;
+    padding-top: 30px;
   clear: both;
 }
 
 #myFooter .footer-copyright {
-  background-color: rgb(0, 0, 0, 0.5);
-  padding-top: 3px;
-  padding-bottom: 3px;
-  text-align: center;
+
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
 }
+
 
 #myFooter .footer-copyright h4 {
-  margin: 10px;
-  color: #ccc;
+    margin: 10px;
+    color: #ccc;
+
+
 }
+
 
 @media screen and (max-width: 767px) {
-  #myFooter {
-    text-align: center;
-  }
+    #myFooter {
+        text-align: center;
+    }
 }
 
+h3 {
+  color: whitesmoke;
+  font-size: 22px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
 /* auto footer on bottom  */

@@ -2,147 +2,151 @@
 <html>
 
 <head>
-  <title>GOfficer</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-  <link rel="stylesheet" type="text/css" href="static/css/header-big.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <!-- Libraries CSS Files -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <title>GOfficer - Gym for Officer</title>
+    <link rel="shortcut icon" href="../static/image/GOfficer (2).png" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/header-big.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Libraries CSS Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
 </head>
-
-<body>
-  <div class="header-nightsky">
-    <nav class="navbar navbar-default">
-      <div class="container  wow zoomIn">
-        <a class="navbar-brand" href="{{ url_for('index') }}">GOfficer</a>
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<body style="background: url({{random_bg}}) center;">
+    <div class="header-nightsky">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url_for('index') }}">GOfficer</a>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="{{url_for('about')}}">ABOUT US</a></li>
-            <li class="dropdown">
-              <ul class="dropdown-menu">
-                <li><a type="button" href="{{url_for('access')}}">Admin</a></li>
-
-                <li><a href="{{url_for('donate')}}">Donate</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div class="hero">
-      <h1 class="wow zoomIn">Gym for Officer</h1>
-      <p class="wow zoomIn">" There are two types of pain in life</p>
-      <p class="wow zoomIn">the pain of discipline and the pain of regret "</p>
-
-      <br><br>
-
-      <div class="container-fluid wow pulse">
-        <form class="" action="/search" method="post">
-          <div class="col-md-1"></div>
-          <div class="col-md-3 no-padding">
-            <select id="time" name="time" class="form-control input-lg" placeholder="Thời gian" onkeydown="if (event.keyCode == 13)
-                        document.getElementById('search-btn').click()">
-                    <option value="all" >Thời gian</option>
-                    <option value="1 phút">1 phút</option>
-                    <option value="3 phút">3 phút</option>
-                    <option value="5 phút">5 phút</option>
-                    <option value="More">More</option>
-                  </select>
-          </div>
-          <div class="col-sm-12 col-md-3 no-padding">
-            <select id="purpose" name="purpose" class="form-control input-lg" placeholder="Mục đích" onkeydown="if (event.keyCode == 13)
-                        document.getElementById('search-btn').click()">
-                    <option value="all">Loại bệnh</option>
-                    <option value="Đau chân">Đau chân</option>
-                    <option value="Đau cổ">Đau cổ</option>
-                    <option value="Đau lưng">Đau lưng</option>
-                    <option value="Đau tay">Đau tay</option>
-                  </select>
-          </div>
-          <div class="col-sm-12 col-md-3 no-padding">
-            <select id="space" name="space" class="form-control input-lg" placeholder="Không gian" onkeydown="if (event.keyCode == 13)
-                        document.getElementById('search-btn').click()">
-                    <option value="all">Không gian tập</option>
-                    <option value ="Tại chỗ">Tại bàn làm việc</option>
-                    <option value="Ngoài sảnh">Ngoài sảnh</option>
-
-                    <option value="WC">WC</option>
-                  </select>
-          </div>
-          <div class="col-sm-12 col-md-1 no-padding">
-            <button id="search-btn" type="submit" class="btn btn-danger btn-lg"><i class="fa fa-search" aria-hidden="true"></i>
-                  </button>
-
-          </div>
-          <div class="col-md-1"></div>
-        </form>
-      </div>
-
-
-    </div>
-  </div>
-
-  <!-- Footer -->
-
-  <footer id="myFooter">
-    <div class="footer-copyright">
-      <h5> Copyright © GOfficer 2017. All Rights Reserved.</h5>
-    </div>
-  </footer>
-
-
-  <!-- Large modal -->
-
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-          <h4 class="modal-title" id="myModalLabel">ADMIN</h4>
-        </div>
-        <div class="modal-body">
-          <h2 class="text-danger"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> WARNING !!</h2>
-          <h3>This site just for admin, please return home page.</h3>
-          <br>
-          <form>
-            <div class="form-group">
-              <!-- <label for="message-text" class="control-label">Password:</label>
-                <input name="password" id="password" type="password" class="form-control" placeholder="Password" required=""> -->
-              <input class="btn" type="button" onclick="sayHello()" value="Click if you're admin" />
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{{url_for('about')}}">About Us</a></li>
+                        <li><a href="{{url_for('donate')}}">Donate</a></li>
+                    </ul>
+                </div>
             </div>
+        </nav>
+        <div class="hero">
+            <h1 class="wow zoomInDown" style="animation-delay: 500ms;">Gym for Officer</h1>
+            <p class="">" There are two types of pain in life</p>
+            <p class="">the pain of discipline and the pain of regret "</p>
 
-          </form>
+            <br>
+
+              <div class="container-fluid wow pulse">
+                <form class="" action="/search" method="post">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-3 no-padding">
+                    <select id="time" name="time" class="form-control input-lg" placeholder="Thời gian" onkeydown = "if (event.keyCode == 13)
+                          document.getElementById('search-btn').click()">
+                      <option value="all" >Thời gian</option>
+                      <option value="1 phút">1 phút</option>
+                      <option value="3 phút">3 phút</option>
+                      <option value="5 phút">5 phút</option>
+                      <option value="More">More</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-12 col-md-3 no-padding">
+                    <select id="purpose" name="purpose" class="form-control input-lg" placeholder="Mục đích" onkeydown = "if (event.keyCode == 13)
+                          document.getElementById('search-btn').click()">
+                      <option value="all">Loại bệnh</option>
+                      <option value="Đau chân">Đau chân</option>
+                      <option value="Đau cổ">Đau cổ</option>
+                      <option value="Đau lưng">Đau lưng</option>
+                      <option value="Đau tay">Đau tay</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-12 col-md-3 no-padding">
+                    <select id="space" name="space" class="form-control input-lg" placeholder="Không gian" onkeydown = "if (event.keyCode == 13)
+                          document.getElementById('search-btn').click()">
+                      <option value="all">Không gian tập</option>
+                      <option value ="Tại chỗ">Tại bàn làm việc</option>
+                      <option value="Ngoài sảnh">Ngoài sảnh</option>
+
+                      <option value="WC">WC</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-12 col-md-1 no-padding">
+                    <button id="search-btn" type="submit" class="btn btn-danger btn-lg"><i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+
+                  </div>
+                  <div class="col-md-1"></div>
+                </form>
+              </div>
+              <div class="align-content-center">
+
+                <form class="" action="{{url_for('baitap', baitap_id = random_id )}}" method="post">
+                  <h3>Confused to select? Let's random!</h3>
+
+                  <button class="btn btn-danger btn-lg" type="submit" name="button">
+                    <i class="fa fa-random fa-lg" aria-hidden="true"></i>
+                  </button>
+                </form>
+
+              </div>
+
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <a href="#" id="demo"></a>
+        <footer id="myFooter">
+            <div class="footer-copyright">
+                <h5> Copyright © GOfficer 2017. All Rights Reserved.</h5>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Footer -->
+
+
+
+
+    <!-- Large modal -->
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title" id="myModalLabel">ADMIN</h4>
+          </div>
+          <div class="modal-body">
+            <h2 class="text-danger"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> WARNING !!</h2>
+            <h3>This site just for admin, please return home page.</h3>
+            <br>
+            <form>
+              <div class="form-group">
+                <!-- <label for="message-text" class="control-label">Password:</label>
+                <input name="password" id="password" type="password" class="form-control" placeholder="Password" required=""> -->
+                <input class="btn" type="button" onclick="sayHello()" value="Click if you're admin" />
+              </div>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <a href="#" id="demo"></a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <script>
-    $('#myModal').on('shown.bs.modal', function() {
+    <script>
+    $('#myModal').on('shown.bs.modal', function () {
       $('#myInput').focus()
     })
-  </script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script>
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
     new WOW().init();
-  </script>
+    </script>
 </body>
 
 </html>
