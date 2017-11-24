@@ -80,15 +80,16 @@
           <div class="col-md-1 col-sm-12"></div>
         </form>
         <h3 class="text-center text-light">Confused to select? Let's random!</h3>
-        <form class="" action="{{url_for('baitap', baitap_id = random_id )}}" method="post">
+
           <div class="col-md-5 float-left"></div>
-          <div class="col-md-2 float-left">
-            <button class="btn btn-danger btn-lg" type="submit" name="button" style="width: 100%">
+          <div class="col-md-2 float-left" >
+            <a href="{{url_for('baitap', baitap_id = random_id )}}"><button  class="btn btn-danger btn-lg" type="submit" name="button" style="width: 100%">
               <i class="fa fa-random fa-lg" aria-hidden="true"></i>
-            </button>
+            </button></a>
+
           </div>
           <div class="col-md-5"></div>
-        </form>
+
         <br><br><br>
         <p class="text-center text-light" style="font: 18px;">Rencent search: {{ request.form["time"] }}, {{ request.form["purpose"] }}, {{ request.form["space"] }} </p>
       </div>
