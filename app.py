@@ -2,7 +2,7 @@ from flask import *
 import mlab
 from pagination import Pagination
 from mongoengine import *
-from flask_pymongo import PyMongo, pymongo
+from flask_pymongo import PyMongo
 import random
 
 
